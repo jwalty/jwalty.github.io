@@ -9,7 +9,6 @@ body {
     font-family: 'Rubik';
     user-select: none;
 }
-
 main {
     height: 80vh;
     display: flex;
