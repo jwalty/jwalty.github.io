@@ -1,51 +1,94 @@
-body {
-    background-image: radial-gradient(circle, rgb(47, 47, 52), rgb(16, 16, 19));
-    background-position: center;
-    height: 100vh;
-    overflow: hidden;
-    color: white;
-    margin: 0;
-    padding: 0;
-    font-family: 'Rubik';
-    user-select: none;
+:root {
+    --header-color: #be3144;
+    --font-color: #f6f6f6;
+    --second-color: #5a5a5a;
 }
-main {
-    height: 80vh;
+
+body {
+    overflow-x: hidden;
+    font-family: sans-serif;
+    color: var(--font-color);
+    background: linear-gradient(45deg, #3a3d40, #19181a);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    gap: 2vmin;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    margin-top: 30vh;
+    padding-bottom: 30vh;
+    gap: 40px;
+    user-select: none;
+}
+
+@media (pointer:none), (pointer:coarse) {
+    body {
+        margin-top: 5vh;
+    }
 }
 
 h1 {
-    font-size: 10vmin;
-    user-select: none;
-    margin-bottom: 0px;
-}
-
-a {
-    text-decoration: none;
-    font-size: 3vmin;
-    color: white;
-    transition: color .25s;
-    display: block
-}
-
-a:hover {
-    color:rgb(81, 81, 117);
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -30px;
 }
 
 #logos {
     display: flex;
-    gap: 15px;
+    gap: 30px;
+}
+
+i {
+    color: var(--font-color);
+    font-size: 2rem;
+}
+
+i:hover {
+    color: rgb(103, 103, 103);
+    transition: 500ms ease-in-out;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
     align-items: center;
+    max-width: 60%;
 }
 
-#logos > a {
-    font-size: 4vmin;
-    display: inline;
+#projects a {
+    text-decoration: none;
+    color: var(--font-color);
 }
 
+.project-container {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: -14px 19px 22px -6px rgba(0, 0, 0, 0.486);
+    user-select: none;
+    cursor: pointer;
+    background-color: var(--header-color);
+    border: 1px solid var(--header-color);
+}
+
+.project-container:hover {
+    background-color: var(--second-color);
+    border: 1px solid var(--second-color);
+    transition: 500ms;
+}
+
+.project-container label {
+   font-size: 1rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 15%;
+}
+
+.project-container img {
+    height: 80%;
+}
